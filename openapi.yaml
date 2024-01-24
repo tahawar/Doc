@@ -1,0 +1,5366 @@
+openapi: 3.0.0
+info:
+  title: 1 dev
+  description: >-
+    Documentation
+
+
+    # onboardiq-Dev
+
+
+    StartFragment
+
+
+    OnboardIQ.io is an agile platform designed to revolutionize the recruitment
+    process with an integrated suite of assessment tools that scrutinize
+    candidate capabilities and fit. It is a dual-faceted tool that aids
+    organizations in identifying the best talent and provides candidates with
+    feedback for professional development.
+
+
+    **Key Features of OnboardIQ.io:**
+
+
+    - **CV Upload**: Streamlines application submissions with a user-friendly
+    interface for uploading CVs in standardized formats.
+
+    - **Oral Proficiency Assessment**: Evaluates candidates' spoken language
+    skills through interactive tasks, helping pinpoint areas for communication
+    skill enhancement.
+
+    - **Predictive Index Test**: Analyzes behavioral patterns to forecast job
+    performance and team fit, offering insights for workplace synergy and
+    personal growth.
+        
+
+    **Professional Application of Assessments:**
+
+
+    - **Feedback Utilization**: Candidates can leverage detailed feedback from
+    the Oral Proficiency Assessment to develop tailored strategies for
+    communication improvement.
+
+    - **Behavioral Insight**: The Predictive Index Test results guide candidates
+    in adapting their work style to foster better teamwork and efficiency.
+        
+
+    **Technical Workflow with onboardiq-Dev:**
+
+
+    - **API Method Execution**: Developers can easily execute API methods by
+    selecting, copying, and pasting the endpoint URL into Postman, replacing the
+    API key, and running the code in their chosen language.
+
+    - **Postman Integration**: The platform allows for streamlined testing via
+    Postman with forkable collections and updatable variables for a personalized
+    development environment.
+        
+
+    ## Step-2: Call Method
+
+
+    ### Run in Code
+
+
+    1. After selecting a method, copy the endpoint URL from the right column of
+    API documentation.
+
+    2. Identify the RESTful API method e.g POST, GET, PUT, DELETE etc from
+    endpoint URL.
+
+    3. Click 'Run in Postman' which will open the Postman request of the
+    respective method.
+
+    4. Select the code snippet of your desired language from the right-side
+    navigation of postman UI.
+
+    5. Replace the API-key in the code snippet with the API-key provided in the
+    Welcome email received when subscribing.
+
+    6. x-api-key = \[Your-API-Key\]
+
+    7. The request schema for the method is shown in the middle column and the
+    request payload (example) is given in the right column.
+
+    8. After providing the API key, request body and RESTful method with the
+    endpoint details, you would be able to execute and receive a response.
+        
+
+    ### Run in Postman
+
+
+    1. The request can be executed within the Postman UI as well by forking the
+    Flex collection and updating the x-api-key header in the collection
+    variables.
+
+    2. Make sure to log-in to your Postman account before clicking the 'Run in
+    Postman' button or login afterwards.
+
+    3. Right click the Flex Collection and click 'Create a Fork' or try to click
+    the 'Send' request button, it should ask you to fork the collection.
+
+    4. Postman's 'Create a Fork' screen will appear, before Forking the
+    collection, please make sure to select 'Watch original collection' checkbox
+    to enable 'Pull Changes' function to receive collection updates.
+
+    5. After the Collection is forked/created in your Postman Workspace, please
+    update the Collection variable(s) "x-api-key" and others based on the
+    values/keys provided to you.
+
+    6. All requests are configured to use their collection variables.
+        
+
+    ## Step-3: Method Response
+
+
+    1. Once you call the method, following are the possible types of responses
+    statuses:
+        1. 200 - Success
+        2. 400 - Bad Request
+        3. 401 - Authorization information is missing or invalid
+        4. 422 - Validation Error
+        5. 500 - Internal server error
+    2. For each of the response statuses the response schemas are given in the
+    method details.
+
+    3. All responses are in JSON format
+        
+
+    # Run in Postman
+
+
+    EndFragment
+  version: 1.0.0
+servers:
+  - url: http://52.21.108.105:5000
+tags:
+  - name: main_admin_account
+  - name: user_accounts
+  - name: user_profiles
+  - name: admin_accounts
+paths:
+  /admin_login/admin-login/:
+    post:
+      tags:
+        - main_admin_account
+      summary: admin-login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: tahawarihsan.codrivity@gmail.com
+                password: '12345678'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 22 Jan 2024 14:32:54 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '91'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                token: iAprZpj9afLu65StbdJmrYmDvf9Xp2Vuqw
+                message: Login successful
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 22 Jan 2024 14:31:28 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '29'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Admin not found
+  /admin_login/forgot-password/:
+    post:
+      tags:
+        - main_admin_account
+      summary: forget-password
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties: {}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 22 Jan 2024 14:36:16 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '22'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: OTP sent
+  /admin_login/verify-otp/:
+    post:
+      tags:
+        - main_admin_account
+      summary: verify-otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: tahawarihsan.codrivity@gmail.com
+                otp: '234023'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 22 Jan 2024 14:37:26 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '41'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: OTP verification successful
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 22 Jan 2024 14:34:13 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '23'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Invalid OTP
+  /admin_login/reset-password/:
+    post:
+      tags:
+        - main_admin_account
+      summary: reset-password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: tahawarihsan.codrivity@gmail.com
+                otp: '234023'
+                new_password: '12345678'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 05:50:10 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '39'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Password reset successful
+  /admin_login/add-admin/:
+    post:
+      tags:
+        - main_admin_account
+      summary: add-admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: faizy2169@gmail.com
+                password: '21695533'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin_login/organization/:
+    get:
+      tags:
+        - main_admin_account
+      summary: all_organizations
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:14:47 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '332'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 2
+                  name: Sample Organization hjk
+                  description: best in the world
+                  address: 1234 Test Street
+                  city: Test City
+                  state: Test State
+                  country: Testland
+                  postal_code: '123456'
+                  phone_number: 123-456-7890
+                  website: https://www.wwe.com/
+                  created_at: '2024-01-23T06:10:58.999307Z'
+                  is_active: true
+                  is_deleted: false
+  /admin_login/organization/create/:
+    post:
+      tags:
+        - main_admin_account
+      summary: add_organization
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Sample Organization tahawar122
+                description: An example organization for testing purposes
+                address: 1234 Test Street
+                city: Test City
+                state: Test State
+                country: Testland
+                postal_code: '123456'
+                phone_number: 123-456-7890
+                website: http://www.sampleorg345.com
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:05:44 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '357'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                name: Sample Organization by tahawar
+                description: An example organization for testing purposes
+                address: 1234 Test Street
+                city: Test City
+                state: Test State
+                country: Testland
+                postal_code: '123456'
+                phone_number: 123-456-7890
+                website: http://www.sampleorg.com
+                created_at: '2024-01-23T06:05:44.736241Z'
+                is_active: true
+                is_deleted: false
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:09:18 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '117'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name:
+                  - organization with this name already exists.
+                website:
+                  - organization with this website already exists.
+  /admin_login/organization/2/:
+    put:
+      tags:
+        - main_admin_account
+      summary: update_organization
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Sample Organization hjk
+                website: https://www.wwe.com/
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:26:08 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '337'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: update_organization
+                  value:
+                    id: 2
+                    name: Sample Organization hjk
+                    description: best in the world
+                    address: 1234 Test Street
+                    city: Test City
+                    state: Test State
+                    country: Testland
+                    postal_code: '123456'
+                    phone_number: 123-456-7890
+                    website: http://www.sampleorg345.com
+                    created_at: '2024-01-23T06:10:58.999307Z'
+                    is_active: true
+                    is_deleted: false
+                example-1:
+                  summary: update_organization
+                  value:
+                    id: 2
+                    name: Sample Organization hjk
+                    description: best in the world
+                    address: 1234 Test Street
+                    city: Test City
+                    state: Test State
+                    country: Testland
+                    postal_code: '123456'
+                    phone_number: 123-456-7890
+                    website: https://www.wwe.com/
+                    created_at: '2024-01-23T06:10:58.999307Z'
+                    is_active: true
+                    is_deleted: false
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:25:21 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '36'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: 400bad
+                  value:
+                    name:
+                      - This field is required.
+                example-1:
+                  summary: invalid_url
+                  value:
+                    website:
+                      - Enter a valid URL.
+  /admin_login/organization/1/:
+    delete:
+      tags:
+        - main_admin_account
+      summary: delete_organization
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:40:29 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '357'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                name: Sample Organization
+                description: An example organization for testing purposes
+                address: 1234 Test Street
+                city: Test City
+                state: Test State
+                country: Testland
+                postal_code: '123456'
+                phone_number: 123-456-7890
+                website: http://www.sampleorg.com
+                created_at: '2024-01-23T06:05:44.736241Z'
+                is_active: true
+                is_deleted: false
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:48:05 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '51'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Organization deactivated successfully
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:39:41 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '36'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail: Organization not found.
+  /admin_login/organization/toggle_status/2/:
+    post:
+      tags:
+        - main_admin_account
+      summary: organisation_toggle_status
+      requestBody:
+        content: {}
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:50:36 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '21'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: inactive
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:46:47 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '36'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail: Organization not found.
+  /admin_login/sub_admins/:
+    get:
+      tags:
+        - main_admin_account
+      summary: sub_admins
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:52:25 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '108'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  email: ammarcodrivity@gmail.com
+                  organization_name: Sample Organization hjk
+                  is_active: true
+  /admin_login/total-active-subadmin/:
+    get:
+      tags:
+        - main_admin_account
+      summary: total_active_subadmins
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:55:05 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '28'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                total_active_subadmins: 0
+  /admin_login/add_sub_admin/:
+    post:
+      tags:
+        - main_admin_account
+      summary: add_sub_admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                organization: 1
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:43:04 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '48'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: New sub-admin created successfully
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:41:56 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '63'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                organization:
+                  - Invalid pk "17" - object does not exist.
+  /admin_login/sub_admins/delete/17/:
+    delete:
+      tags:
+        - main_admin_account
+      summary: delete_sub_admin
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:53:55 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: DELETE, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '31'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Sub-admin not found
+  /admin_login/sub_admin/toggle_status/1/:
+    post:
+      tags:
+        - main_admin_account
+      summary: subadmin_toggle_status
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: ''
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 06:57:16 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '19'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: active
+  /admin_login/total-users/:
+    get:
+      tags:
+        - main_admin_account
+      summary: total_users
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:07:25 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '17'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                total_users: 0
+  /admin_login/total-organizations/:
+    get:
+      tags:
+        - main_admin_account
+      summary: total_organizations
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:10:57 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '25'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                total_organizations: 1
+  /admin_login/total-cvs/:
+    get:
+      tags:
+        - main_admin_account
+      summary: total_cvs
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:11:47 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '15'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                total_cvs: 0
+  /admin_login/total-oral-test-submissions/:
+    get:
+      tags:
+        - main_admin_account
+      summary: total_oral_test_submissions
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:12:15 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '33'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                total_oral_test_submissions: 0
+  /admin_login/total-predictive-index/:
+    get:
+      tags:
+        - main_admin_account
+      summary: total-predictive-index
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:12:50 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '28'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                total_predictive_index: 0
+  /admin_login/top-organizations/:
+    get:
+      tags:
+        - main_admin_account
+      summary: top-organizations
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:13:19 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '109'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - name: Sample Organization hjk
+                  city: Test City
+                  country: Testland
+                  user_count: 0
+                  status: active
+  /admin_login/top-active-admins/:
+    get:
+      tags:
+        - main_admin_account
+      summary: top-active-admins
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:13:53 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '115'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - organization_name: Sample Organization hjk
+                  subadmin_email: ammarcodrivity@gmail.com
+                  total_tests_count: 0
+  /admin_login/user-subadmin-percentages/:
+    get:
+      tags:
+        - main_admin_account
+      summary: user-subadmin-percentages
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{Token}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 07:15:08 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '71'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                active_user_percentage: 0
+                active_subadmins_with_reset_password: 0
+  /user_accounts/add_user_/1:
+    post:
+      tags:
+        - user_accounts
+      summary: signup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: tahawar
+                email: tahawarihsan.codrivity@gmail.com
+                password: '123456789'
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:17:27 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '144'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                name: tahawar
+                email: p190097@nu.edu.pk
+                organization_id: 2
+                message: User added and verification OTP sent successfully
+  /user_accounts/get_org_id/:
+    post:
+      tags:
+        - user_accounts
+      summary: get_org_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                url: https://www.wwe.com/
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:18:24 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '22'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                organization_id: 2
+  /user_accounts/initiate_otp_verification/:
+    post:
+      tags:
+        - user_accounts
+      summary: initiate_otp_verification
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: tahawarihsan.codrivity@gmail.com
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:34:14 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '49'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Verification OTP sent successfully
+  /user_accounts/initial_verify_otp/:
+    post:
+      tags:
+        - user_accounts
+      summary: verify_initial_otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: tahawarihsan.codrivity@gmail.com
+                otp: '615185'
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:34:47 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '44'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Account verified successfully
+  /user_accounts/login/:
+    post:
+      tags:
+        - user_accounts
+      summary: login-
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: tahawarihsan.codrivity@gmail.com
+                password: '123456789'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:35:57 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '170'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 3
+                name: tahawar
+                email: tahawarihsan.codrivity@gmail.com
+                token: usiyiouyt348590458iodfjghdkjghrgdfkj
+                org_id: 1
+                message: Login successful
+  /user_accounts/request_forget_password/:
+    post:
+      tags:
+        - user_accounts
+      summary: request_forget_password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:53:14 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '51'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Password reset OTP sent successfully
+  /user_accounts/verify_otp_forget_password/:
+    post:
+      tags:
+        - user_accounts
+      summary: verify_otp_forget_password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                otp: '441019'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:53:54 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '68'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: OTP verified successfully. Proceed to reset password.
+  /user_accounts/change_password/:
+    post:
+      tags:
+        - user_accounts
+      summary: change_password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                new_password: newSecurePassword1235678
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:54:41 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '44'
+            Vary:
+              schema:
+                type: string
+                example: origin
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Password changed successfully
+  /user_profiles/personal-information/:
+    post:
+      tags:
+        - user_profiles
+      summary: personal-information
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                user: 1
+                first_name: Matti
+                last_name: Ur Rehman
+                phone_number: '+1234567890'
+                date_of_birth: '1999-01-01'
+                current_address: 123 Main St
+                city: Anytown
+                state: AN
+                zip: '12345'
+                cv_gender: M
+                nationality: United States
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:58:26 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '242'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                first_name: Matti
+                last_name: Ur Rehman
+                phone_number: '+1234567890'
+                date_of_birth: '1999-01-01'
+                current_address: 123 Main St
+                city: Anytown
+                state: AN
+                zip: '12345'
+                cv_gender: M
+                nationality: United States
+                user: 1
+    get:
+      tags:
+        - user_profiles
+      summary: personal-information get
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:59:21 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '242'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                first_name: Matti
+                last_name: Ur Rehman
+                phone_number: '+1234567890'
+                date_of_birth: '1999-01-01'
+                current_address: 123 Main St
+                city: Anytown
+                state: AN
+                zip: '12345'
+                cv_gender: M
+                nationality: United States
+                user: 1
+  /user_profiles/work-experience/:
+    post:
+      tags:
+        - user_profiles
+      summary: add-work
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                user: 1
+                company_name: Innovative Tech Solutions
+                job_title: Software Developer
+                employment_type: FT
+                work_method: REM
+                work_start_date: 15/01/2020
+                work_end_date: 15/01/2022
+                description: >-
+                  Responsible for developing and maintaining web applications
+                  using Django and React. Worked closely with the product team
+                  to implement user-friendly features.
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:02:18 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '370'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                work_start_date: 15/01/2020
+                work_end_date: 15/01/2022
+                company_name: Innovative Tech Solutions
+                job_title: Software Developer
+                employment_type: FT
+                work_method: REM
+                description: >-
+                  Responsible for developing and maintaining web applications
+                  using Django and React. Worked closely with the product team
+                  to implement user-friendly features.
+                user: 1
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:01:41 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '54'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                user:
+                  - Invalid pk "5" - object does not exist.
+    get:
+      tags:
+        - user_profiles
+      summary: get-works
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 13:00:15 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '2'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example: []
+  /user_profiles/work-experience/1/:
+    put:
+      tags:
+        - user_profiles
+      summary: update-work
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                user: 1
+                company_name: Codrivity
+                job_title: Software Developer
+                employment_type: FT
+                work_method: REM
+                start_date: '2020-01-15'
+                end_date: '2022-05-30'
+                work_start_date: 15/01/2020
+                description: >-
+                  Responsible for developing and maintaining web applications
+                  using Django and React. Worked closely with the product team
+                  to implement user-friendly features.
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:09:03 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '354'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                work_start_date: 15/01/2020
+                work_end_date: 15/01/2022
+                company_name: Codrivity
+                job_title: Software Developer
+                employment_type: FT
+                work_method: REM
+                description: >-
+                  Responsible for developing and maintaining web applications
+                  using Django and React. Worked closely with the product team
+                  to implement user-friendly features.
+                user: 1
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:08:47 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '47'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                work_start_date:
+                  - This field is required.
+  /user_profiles/work-experience/3/:
+    delete:
+      tags:
+        - user_profiles
+      summary: delete-work
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /user_profiles/education/:
+    post:
+      tags:
+        - user_profiles
+      summary: add-education
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                user: 1
+                institute_name: Punjab College Islamabad
+                title: Intermediate of Computer Science
+                education_level: BD
+                start_date: '2015-01-01'
+                end_date: '2017-01-01'
+                score: '756'
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:13:01 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '191'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                start_date: 01/01/2015
+                end_date: 01/01/2017
+                institute_name: Punjab College Islamabad
+                title: Intermediate of Computer Science
+                education_level: BD
+                score: '756'
+                user: 1
+    get:
+      tags:
+        - user_profiles
+      summary: get-education
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:14:33 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '193'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 2
+                  start_date: 01/01/2015
+                  end_date: 01/01/2017
+                  institute_name: Punjab College Islamabad
+                  title: Intermediate of Computer Science
+                  education_level: BD
+                  score: '756'
+                  user: 1
+  /user_profiles/education/1/:
+    put:
+      tags:
+        - user_profiles
+      summary: edit-education
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                user: 1
+                institute_name: Punjab College
+                title: Intermediate of Computer Sciences
+                education_level: HS
+                start_date: '2015-05-01'
+                end_date: '2017-05-01'
+                score: '756'
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:13:39 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '182'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                start_date: 01/05/2015
+                end_date: 01/05/2017
+                institute_name: Punjab College
+                title: Intermediate of Computer Sciences
+                education_level: HS
+                score: '756'
+                user: 1
+    delete:
+      tags:
+        - user_profiles
+      summary: delete-education
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:14:00 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '0'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: null
+  /user_profiles/upload-cv/:
+    post:
+      tags:
+        - user_profiles
+      summary: upload-cv
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                cv_file:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:16:21 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '86'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                cv_file: /media/cvs/Tayyab_Resume.pdf
+                uploaded_at: '2024-01-23T12:16:20.866479Z'
+    get:
+      tags:
+        - user_profiles
+      summary: upload-cv get
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:17:07 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '86'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                cv_file: /media/cvs/Tayyab_Resume.pdf
+                uploaded_at: '2024-01-23T12:16:20.866479Z'
+  /user_profiles/list_tests_user/:
+    get:
+      tags:
+        - user_profiles
+      summary: https://www.onboardiq.io/api/user_profiles/list_tests_user/
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:07:06 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '35'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  name: German Language
+  /user_profiles/test_questions/1/:
+    get:
+      tags:
+        - user_profiles
+      summary: https://www.onboardiq.io/api/user_profiles/test_questions/2/
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:07:30 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '147'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 2
+                  test: 1
+                  question_type: TXT
+                  text: Ae ni Samreen ki haal ae? qq?
+                  image_url: null
+                  description: Best Codrivity frontend developer
+  /user_profiles/audio_response/2/:
+    post:
+      tags:
+        - user_profiles
+      summary: audio_responses
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                audio_file:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:41:30 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '30'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Question not found
+  /user_profiles/submit_test/1/:
+    post:
+      tags:
+        - user_profiles
+      summary: submit_test
+      requestBody:
+        content: {}
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 13:00:53 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '41'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test submitted successfully
+  /user_profiles/user_tests_taken:
+    get:
+      tags:
+        - user_profiles
+      summary: user_tests_taken
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 13:01:11 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '97'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  test: 1
+                  test_name: German Language
+                  submission_date: '2024-01-23T13:00:53.066518Z'
+  /user_profiles/predictive-index/:
+    post:
+      tags:
+        - user_profiles
+      summary: predictive-index
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                age: 30-39
+                gender: male
+                race: white
+                education: BD
+                feedback_preference: data_no_opinion
+                strategic_feedback: data_only
+                holiday_party_preference: central
+                expected_behaviors:
+                  - social
+                  - neat
+                self_described_behaviors:
+                  - patient
+                  - reasonable
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:34:24 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '280'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 2
+                user: 3
+                age: 30-39
+                gender: male
+                race: white
+                education: BD
+                feedback_preference: data_no_opinion
+                strategic_feedback: data_only
+                holiday_party_preference: central
+                expected_behaviors:
+                  - social
+                  - neat
+                self_described_behaviors:
+                  - patient
+                  - reasonable
+        '400':
+          description: Bad Request
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:01:04 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '58'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Predictive index already exists for this user.
+    get:
+      tags:
+        - user_profiles
+      summary: get-predictive-index
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:05:47 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '280'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                user: 3
+                age: 30-39
+                gender: male
+                race: white
+                education: BD
+                feedback_preference: data_no_opinion
+                strategic_feedback: data_only
+                holiday_party_preference: central
+                expected_behaviors:
+                  - social
+                  - neat
+                self_described_behaviors:
+                  - patient
+                  - reasonable
+  /user_profiles/application-progress/:
+    post:
+      tags:
+        - user_profiles
+      summary: application-progress post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                progress: 0
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:06:25 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '14'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                progress: 1
+    get:
+      tags:
+        - user_profiles
+      summary: application-progress
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{user}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:06:39 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '14'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                progress: 1
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Wed, 24 Jan 2024 07:06:03 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '44'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail: Application progress not found.
+  /admin_accounts/sub_admin_login/:
+    post:
+      tags:
+        - admin_accounts
+      summary: sub_admin_login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                password: '12345'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 09:56:17 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '56'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Success
+                  value:
+                    first_login: true
+                    message: Password reset required
+                example-1:
+                  summary: token
+                  value:
+                    token: p3UqkKTOv0Ghm88q9a6CqD1nL2qxXOkuAjeo0yZXesiPeAftYN
+                    org_id: 1
+  /admin_accounts/sub_admin_request_forget_password/:
+    post:
+      tags:
+        - admin_accounts
+      summary: request_forget_password_sub_admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:17:22 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '31'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: OTP sent to email
+  /admin_accounts/sub_admin_reset_pass/:
+    post:
+      tags:
+        - admin_accounts
+      summary: sub_admin_reset_password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                otp: '959889'
+                n_password: '123456789'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:17:41 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '39'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Password reset successful
+  /admin_accounts/sub_admin_verify_otp/:
+    post:
+      tags:
+        - admin_accounts
+      summary: sub_admin_verify_otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                otp: '959889'
+      responses:
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:19:10 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '39'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: No OTP found for this email
+  /admin_accounts/sub_admin_reset_password/:
+    post:
+      tags:
+        - admin_accounts
+      summary: first_time_admin_password_reset
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: p190097@nu.edu.pk
+                temp_password: xRSyUwd73E
+                new_password: '12345'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 09:57:36 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '39'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Password reset successful
+  /admin_accounts/create_test/:
+    post:
+      tags:
+        - admin_accounts
+      summary: create_test
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Arabic Language
+                description: This is a sample test description
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:20:33 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '51'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test created successfully
+                test_id: 1
+  /admin_accounts/update_test/1/:
+    put:
+      tags:
+        - admin_accounts
+      summary: update_test
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: German Language
+                description: This is a sample test description
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:43:09 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: PUT, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '154'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                name: German Language
+                description: This is a sample test description
+                organization: 1
+                created_by: 2
+                created_by_email: p190097@nu.edu.pk
+  /admin_accounts/delete_test/2/:
+    delete:
+      tags:
+        - admin_accounts
+      summary: delete_test
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:44:15 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: DELETE, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '43'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test deactivated successfully
+  /admin_accounts/list_tests_admin/1/:
+    get:
+      tags:
+        - admin_accounts
+      summary: list_tests
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:24:33 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '156'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  name: Arabic Language
+                  description: This is a sample test description
+                  organization: 1
+                  created_by: 2
+                  created_by_email: p190097@nu.edu.pk
+        '403':
+          description: Forbidden
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:23:19 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '62'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Not authorized to view tests for this organization
+  /admin_accounts/test_detail_admin/2:
+    get:
+      tags:
+        - admin_accounts
+      summary: test_detail
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 12:29:06 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '222'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 1
+                name: German Language
+                description: This is a sample test description
+                questions:
+                  - id: 2
+                    type: Text
+                    text: Ae ni Samreen ki haal ae? qq?
+                    image: null
+                    description: Best Codrivity frontend developer
+  /admin_accounts/add_question/1/:
+    post:
+      tags:
+        - admin_accounts
+      summary: add_question
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                question_type:
+                  type: string
+                  example: TXT
+                image:
+                  type: string
+                  format: binary
+                description:
+                  type: string
+                  example: Did you find a Laptop in a picture? Explain?
+                text:
+                  type: string
+                  example: Tell us something about youself?
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:49:11 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: POST, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '57'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Success
+                  value:
+                    message: Question added successfully
+                    question_id: 1
+                example-1:
+                  summary: Success
+                  value:
+                    message: Question added successfully
+                    question_id: 2
+  /admin_accounts/update_question/2/:
+    put:
+      tags:
+        - admin_accounts
+      summary: update_question
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                question_type:
+                  type: string
+                  example: TXT
+                text:
+                  type: string
+                  example: Ae ni Samreen ki haal ae? qq?
+                description:
+                  type: string
+                  example: Best Codrivity frontend developer
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 10:56:24 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: PUT, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '140'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 2
+                test: 1
+                question_type: TXT
+                text: Ae ni Samreen ki haal ae? qq
+                image: null
+                description: Best Codrivity frontend developer
+  /admin_accounts/delete_question/1/:
+    delete:
+      tags:
+        - admin_accounts
+      summary: delete_question
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:03:23 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: DELETE, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '47'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Question deactivated successfully
+        '404':
+          description: Not Found
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:03:10 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: DELETE, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '30'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Question not found
+  /admin_accounts/total_cvs/:
+    get:
+      tags:
+        - admin_accounts
+      summary: total_cvs_in_an_organization
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:04:00 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '35'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                organization_id: 1
+                total_cvs: 0
+  /admin_accounts/total_test_submissions/:
+    get:
+      tags:
+        - admin_accounts
+      summary: total_test_submissions
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:04:52 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '48'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                organization_id: 1
+                total_test_submissions: 0
+  /admin_accounts/total_users/:
+    get:
+      tags:
+        - admin_accounts
+      summary: total_users_in_an_organization
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Token {{subadmin}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 23 Jan 2024 11:05:23 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.12.1
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, origin
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '37'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                organization_id: 1
+                total_users: 0
